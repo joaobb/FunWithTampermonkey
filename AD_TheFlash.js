@@ -2,8 +2,8 @@
 // @name         AD: The Flash
 // @namespace    http://tampermonkey.net/
 // @version      0.2
-// @description  Makes YouTube ADs run as fast as mute version The Flash.
-// @author       https://github.com/joaobb/
+// @description  try to take over the world!
+// @author       Me
 // @match        https://www.youtube.com/*
 // @icon         https://www.youtube.com/s/desktop/bb401db8/img/favicon.ico
 // @grant        none
@@ -43,7 +43,7 @@
         if (getIsWatchPage) {
             if (getAdOverlay()) {
                 const video = getVideo()
-                video.playbackRate = MAX_PLAYBACK_SPEED
+                video.playbackRate = MAX_PLAYBACK_RATE
                 video.muted = true
 
                 await adSkipper()
